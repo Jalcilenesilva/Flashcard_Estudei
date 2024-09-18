@@ -1,0 +1,41 @@
+{% extends "Estudei/base.html" %}
+
+{% load static %}  <!-- Adicione esta linha para carregar a tag static -->
+
+{% block header %}
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold">Transforme seu aprendizado com eficiência.</h1>
+                    <p class="fs-4">Com o Estudei, você organiza seus tópicos de estudo, e anotaçoes para revisão  facilitanto atingir suas metas de aprendizado mais rápido.</p>
+                    <p class="fs-5 mb-4">Experimente uma nova forma de estudar: mais organizada, prática e personalizada.</p>
+                    {% if not user.is_authenticated %}
+                        <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Crie uma conta grátis</a>
+                    {% endif %}
+                </div>
+                <div class="col-md-6 text-center">"
+                    <img src="{% static 'img/estudei1.png' %}" alt="Learning Illustration" class="img-fluid full-height-image">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    {% if not user.is_authenticated %}
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="mb-4">Junte-se à comunidade Estudei e revolucione seu aprendizado!</h2>
+                    <p class="fs-4 mb-4">Ao criar uma conta, você poderá:</p>
+                    <ul class="list-unstyled fs-5 mb-4">
+                        <li><i class="bi bi-check-circle"></i> Organizar suas anotações de forma prática</li>
+
+                    </ul>
+                    <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Crie sua conta agora</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

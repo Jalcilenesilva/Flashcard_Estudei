@@ -1,0 +1,37 @@
+{% extends "Estudei/base.html" %}
+
+{% block header %}
+    <h2 class="text-center mt-4">{{ topic }}</h2>
+{% endblock header %}
+
+{% block content %}
+  <div class="d-flex justify-content-between">
+        <a href="{% url 'new_entry' topic.id %}" class="btn btn-primary">Adicionar  anotação</a>
+        <a href="{% url 'delete_topic' topic.id %}" class="btn btn-danger">Excluir matéria</a>
+    </div>
+
+ {% for entry in entries %}
+    <div class="card mb-3">
+        <div class="card-header">
+            <h5 class="mb-0">
+                {{ entry.date_added | date:"M d, Y H:i" }}
+                <div class="d-flex bd-highlight">
+                    <div class="p-2 flex-grow-1 bd-highlight"></div> <!-- Espaço para alinhar os botões -->
+                    <div class="p-2 bd-highlight">
+                        <a href="{% url 'edit_entry' entry.id %}" class="btn btn-link">Editar anotação</a>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <a href="{% url 'delete_entry' entry.id %}" class="btn btn-danger">Excluir Anotação</a>
+                    </div>
+                </div>
+            </h5>
+        </div>
+        <div class="card-body">
+            {{ entry.text | linebreaks }}
+        </div>
+    </div>
+{% empty %}
+    <p>Não há registros.</p>
+{% endfor %}
+
+{% endblock content %}
