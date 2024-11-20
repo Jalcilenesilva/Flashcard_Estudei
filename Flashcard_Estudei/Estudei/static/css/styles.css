@@ -1,0 +1,116 @@
+{% extends "Estudei/base.html" %}
+
+/* Estilos gerais */
+body {
+    background-color: #f0f0f0; /* Cinza claro para o fundo geral */
+    color: #333333; /* Texto em cinza escuro para melhor legibilidade */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar (barra de navegação) */
+.navbar {
+    background-color: #2ec4b6; /* Verde claro para a barra de navegação */
+    color: #ffffff; /* Texto branco */
+}
+
+.navbar .navbar-brand {
+    color: #4F4F4F; /* Texto do nome do aplicativo cinza escuro */
+    font-family: 'Pacifico', cursive; /* Fonte desenhada */
+    font-size: 1.8rem; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.navbar .nav-link {
+    color: #ffffff; /* Links brancos */
+}
+
+.navbar .nav-link:hover {
+    color: #d1f2ec; /* Hover para links com um tom de verde mais claro */
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Inverter a cor do ícone da navbar (hambúrguer) */
+}
+
+/* Estilos para o container principal */
+.container {
+    background-color:#F5F5F5; /* Fundo cinza claro para o container */
+    color: #333333; /* Texto em cinza escuro */
+    padding: 20px; /* Espaçamento interno para o conteúdo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+}
+
+/* Tópicos e links */
+a {
+    color: #2ec4b6; /* Links padrão em verde claro */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+a:hover {
+    color: #249b8d; /* Links ao passar o mouse (verde escuro) */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+/* Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    color: #333333; /* Cabeçalhos em cinza escuro */
+    font-weight: bold; /* Negrito nos títulos */
+}
+
+/* Botões */
+button, .btn {
+    background-color: #2ec4b6; /* Cor cinza escuro para os botões */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+button:hover, .btn:hover {
+    background-color: #333333; /* Tom mais escuro no hover */
+    color: #ffffff; /* Texto branco no hover */
+}
+
+/* Estilos para as cards de anotações */
+.card {
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ddd; /* Borda cinza claro */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra leve ao redor */
+    margin-bottom: 20px; /* Espaçamento entre cards */
+}
+
+.card-header {
+    background-color: #f0f0f0; /* Alterado o fundo verde claro para cinza claro */
+    color: #333333; /* Texto cinza escuro no cabeçalho */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-top-left-radius: 8px; /* Bordas arredondadas no topo */
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px; /* Espaçamento interno para o conteúdo da card */
+    color: #333333; /* Texto em cinza escuro */
+}
+
+/* Outros ajustes */
+.border-bottom {
+    border-bottom: 2px solid #2ec4b6; /* Linha verde clara */
+}
+
+.help-block {
+    display: none;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.text-black {
+  color: black; /* Cor do nome adicionar tópico */
+}
+
+

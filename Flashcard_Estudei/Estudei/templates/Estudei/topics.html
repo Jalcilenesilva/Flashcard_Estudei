@@ -1,0 +1,24 @@
+{% extends "Estudei/base.html" %}
+{% block header %}
+  <h1 style="color: #333; font-size: 2em; text-align: center;">Matérias</h1>
+{% endblock header %}
+
+{% block content %}
+
+  <ul>
+    {% for topic in topics %}
+      <li>
+        <h3>
+        <a href="{% url 'topic' topic.id %}">{{ topic }}</a>
+        </h3>
+
+      </li>
+    {% empty %}
+      <li>Não há tópicos adicionados</li>
+    {% endfor %}
+  </ul>
+<h3>
+  <a class="btn btn-primary fw-bold" href="{% url 'new_topic' %}">Adicionar</a>
+</h3>
+
+{% endblock %}
